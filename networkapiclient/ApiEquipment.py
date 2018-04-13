@@ -30,7 +30,8 @@ class ApiEquipment(ApiGenericClient):
             networkapi_url,
             user,
             password,
-            user_ldap
+            user_ldap,
+            log_level
         )
 
     def get_equipment(self, **kwargs):

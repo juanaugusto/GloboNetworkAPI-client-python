@@ -66,7 +66,8 @@ class ApiGenericClient(object):
             request = requests.get(
                 self._url(uri),
                 auth=self._auth_basic(),
-                headers=self._header()
+                headers=self._header(),
+                verify=False
             )
 
             request.raise_for_status()

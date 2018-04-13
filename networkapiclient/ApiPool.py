@@ -19,7 +19,7 @@ from networkapiclient.utils import build_uri_with_ids
 
 class ApiPool(ApiGenericClient):
 
-    def __init__(self, networkapi_url, user, password, user_ldap=None):
+    def __init__(self, networkapi_url, user, password, user_ldap=None, log_level='INFO'):
         """Class constructor receives parameters to connect to the networkAPI.
         :param networkapi_url: URL to access the network API.
         :param user: User for authentication.
@@ -30,7 +30,8 @@ class ApiPool(ApiGenericClient):
             networkapi_url,
             user,
             password,
-            user_ldap
+            user_ldap,
+            log_level
         )
 
     def pool_by_environmentvip(self, environment_vip_id):
