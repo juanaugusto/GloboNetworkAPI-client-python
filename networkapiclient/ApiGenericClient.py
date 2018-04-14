@@ -103,7 +103,8 @@ class ApiGenericClient(object):
                 data=json.dumps(data),
                 files=files,
                 auth=self._auth_basic(),
-                headers=self._header()
+                headers=self._header(),
+                verify=False
             )
 
             request.raise_for_status()
@@ -138,7 +139,8 @@ class ApiGenericClient(object):
                 self._url(uri),
                 data=json.dumps(data),
                 auth=self._auth_basic(),
-                headers=self._header()
+                headers=self._header(),
+                verify=False
             )
 
             request.raise_for_status()
@@ -172,7 +174,8 @@ class ApiGenericClient(object):
                 self._url(uri),
                 data=json.dumps(data),
                 auth=self._auth_basic(),
-                headers=self._header()
+                headers=self._header(),
+                verify=False
             )
 
             request.raise_for_status()
